@@ -62,6 +62,9 @@ body {
   background-color: white;
   outline: 2px solid var(--clr-primary);
 }
+.section-text-content {
+  text-align: center;
+}
 h1,
 h2,
 h3,
@@ -100,7 +103,7 @@ nav {
 .banner {
   color: white;
   text-align: center;
-  background-image: url(../Images/Group\13\\(1\)\\(1\).png),
+  background-image: url(../Images/Group\ 13\ \(1\)\ \(1\).png),
     var(--linear-gradient-banner);
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -165,13 +168,14 @@ nav {
   align-items: center;
 }
 
-.section-text-content {
+.tour .section-text-content {
   width: 60ch;
 }
 .tour p {
   margin-block: 2rem;
 }
 .section-list {
+  text-align: left;
   padding-left: 1rem;
 }
 .section-list li {
@@ -222,6 +226,7 @@ nav {
 }
 
 .layout-grid .grid-item p {
+  font-size:clamp(1rem , 1.45vw , var(--fs-28));
   width: min-content;
   height: min-content;
   position: absolute;
@@ -246,3 +251,44 @@ nav {
 .grid-item:hover:before {
   opacity: 0;
 }
+
+/* Reasons Section */
+.reasons{
+    text-align: center;
+}
+
+.reasons .section-desc{
+  margin-block: 2rem;
+  max-width: 60ch;
+  margin-inline: auto;
+}
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content:center;
+  
+}
+
+.reasons .card{
+  text-align:left ;
+max-width: 55ch;
+padding: 1.5rem;
+background-color: var(--clr-tan);
+border: 2px solid var(--clr-border-1);
+
+
+}
+.card img{
+  max-width: 4rem;
+}
+.reasons .card-3{
+  border-radius: 1rem;
+  border: 2px solid var(--clr-border-2);
+background-color: var(--clr-blusish);
+align-self: baseline;
+}
+.card .sub-heading{
+  margin: 1rem 0;
+}
+
