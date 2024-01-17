@@ -403,13 +403,21 @@ max-width: 800px;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
+.news-letter hr{
+  margin-block: 2rem;
+  border: 1px solid var(--clr-dark-2);
+  border-bottom: none;
+  }
 .news-letter .section-text-content{
   flex: 1;
   border-radius: 1rem;
   border: 2px solid var(--clr-primary);
   text-align: left;
-  padding: 2.5rem;
+  padding: 3.5rem;
 max-width: 50ch;
+}
+.news-letter .section-desc{
+  margin-top: 2rem;
 }
 .section-text-content form{
   margin-block: 1rem;
@@ -424,6 +432,7 @@ max-width: 50ch;
   margin-block: 1rem;
 }
 .news-letter .btn-primary{
+  margin-top: 2rem;
 justify-content: center;
   width: 100%;
 }
