@@ -292,3 +292,52 @@ align-self: baseline;
   margin: 1rem 0;
 }
 
+
+/* Deals Section */
+.deals .deals-card{
+  border-radius: 1rem;
+  margin-block: 2rem;
+  width: 100%;
+  display: flex;
+  padding: 3.5rem;
+ 
+}
+.deals-card .card{
+  border-radius: 1rem;
+  /* width: 60ch; */
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(2.5px);
+
+  /* margin: 0 2rem 0 auto; */
+}
+.deals-card .card-desc{
+  width: 40ch;
+
+
+}
+
+.deals-card .price{
+  margin-block: 1rem;
+}
+.bali{
+  background-image: url(../Images/Bali.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.bandarban{
+  background-image: url(../Images/bandarban_2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.bandarban .card{
+  margin: 0 0 0 auto;
+}
+.peru{
+  background-image: url(../Images/machu.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.deals .see-more-btn {
+  margin: 3rem auto 6rem;
+}
