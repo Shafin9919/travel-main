@@ -18,7 +18,7 @@
 
   /* Font Sizes  */
   --fs-16: 1rem;
-  --fs-24: 1.25rem;
+  --fs-24: 1.5rem;
   --fs-28: 1.75rem;
   --fs-36: 2.25rem;
   --fs-40: 2.5rem;
@@ -38,10 +38,12 @@
 body {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 3rem 5.3125rem;
+
   font-family: "Mulish", sans-serif;
   color: var(--clr-dark-2);
 }
+
+
 .clr-primary-text {
   color: var(--clr-primary);
 }
@@ -56,6 +58,7 @@ body {
   font-size: var(--fs-16);
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .btn-primary:hover {
   color: var(--clr-primary);
@@ -72,11 +75,18 @@ h4 {
   color: var(--clr-header-text);
 }
 .section-title {
-  font-size: var(--fs-40);
+  font-size: clamp(20px,2.083333vw ,var(--fs-40));
+}
+main{
+  padding: 3rem 5.3125rem;
 }
 /* Header */
 
 /* Nav */
+
+header{
+  padding: 3rem 5.3125rem;
+}
 
 nav {
   display: flex;
@@ -90,12 +100,20 @@ nav {
   gap: 1rem;
   font-size: 2.25rem;
   color: var(--clr-header-text);
+  cursor: pointer;
 }
 
 .nav-menu {
   display: flex;
   gap: 3rem;
   font-size: 1.25rem;
+}
+.nav-menu a{
+  color: var(--clr-dark-2);
+}
+.nav-menu span{
+  color: var(--clr-primary);
+  cursor: pointer;
 }
 
 /* Banner */
@@ -113,7 +131,7 @@ nav {
 }
 .banner-heading {
   color: white;
-  font-size: var(--fs-64);
+  font-size: clamp(22px ,3.33333vw ,var(--fs-64));
 }
 .banner-desc {
   max-width: 50ch;
@@ -169,7 +187,7 @@ nav {
 }
 
 .tour .section-text-content {
-  width: 60ch;
+  max-width: 60ch;
 }
 .tour p {
   margin-block: 2rem;
@@ -189,6 +207,7 @@ nav {
 .section-img {
   flex: 1;
 }
+
 
 /* Location Section */
 
@@ -277,13 +296,13 @@ padding: 1.5rem;
 background-color: var(--clr-tan);
 border: 2px solid var(--clr-border-1);
 
-
+border-radius: 1rem;
 }
 .card img{
   max-width: 4rem;
 }
 .reasons .card-3{
-  border-radius: 1rem;
+
   border: 2px solid var(--clr-border-2);
 background-color: var(--clr-blusish);
 align-self: baseline;
@@ -304,17 +323,26 @@ align-self: baseline;
 }
 .deals-card .card{
   border-radius: 1rem;
-  /* width: 60ch; */
+  max-width: 60ch; 
   padding: 3rem;
   background-color: rgba(255, 255, 255, 0.80);
   backdrop-filter: blur(2.5px);
 
-  /* margin: 0 2rem 0 auto; */
+}
+.deals-card .card p span{
+color: var(--clr-primary);
+font-weight: 600;
 }
 .deals-card .card-desc{
-  width: 40ch;
-
-
+  max-width: 40ch;
+}
+.deals-card .card div{
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+.deals-card .card div span{
+  margin-right: 1rem;
 }
 
 .deals-card .price{
@@ -340,4 +368,227 @@ align-self: baseline;
 }
 .deals .see-more-btn {
   margin: 3rem auto 6rem;
+}
+
+/* Bandarban Tour */
+
+.bandarban-tour{
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bandarban-tour .section-text-content{
+  text-align: left;
+ width: 60ch;
+ 
+}
+.bandarban-tour .section-desc{
+margin-block: 1.5rem;
+}
+.bandarban-tour .section-list{
+  color: var(--clr-header-text);
+  font-weight: 600;
+}
+.bandarban-tour video{
+  border-radius: 1rem;
+width: 50%;
+max-width: 800px;
+}
+
+/* Newsletter Section */
+.news-letter{
+  display: flex;
+  margin:7.875rem 0 6rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.news-letter .section-text-content{
+  flex: 1;
+  border-radius: 1rem;
+  border: 2px solid var(--clr-primary);
+  text-align: left;
+  padding: 2.5rem;
+max-width: 50ch;
+}
+.section-text-content form{
+  margin-block: 1rem;
+}
+.section-text-content input{
+  background-color: rgba(19, 19, 24, 0.05);
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  margin-block: 1rem;
+}
+.news-letter .btn-primary{
+justify-content: center;
+  width: 100%;
+}
+.news-letter .section-img{
+  position: relative;
+
+}
+.news-letter .section-img img{
+  width: 100%;
+}
+.ribbon{
+ max-width: 400px;
+  position: absolute;
+  background-color: var(--clr-primary);
+  border-radius: 1rem;
+  padding:3.5%;
+  transform: rotate(-19.628deg);
+ bottom: 2.5rem;
+ right: .5rem;
+  color: white;
+  text-align: center;
+}
+.ribbon h3{
+  color: white;
+  font-size:  clamp(1rem , 1.6667vw, 2rem);
+  font-weight: 700;
+ 
+}
+.ribbon p{
+  font-size: clamp(1rem, 1.25vw, var(--fs-24));
+}
+
+/* Footer */
+footer{
+  padding: 6.5rem 20rem;
+  background-color: var(--clr-footer);
+  color: var(--clr-footer-text);
+  text-align: center;
+}
+footer .logo{
+ justify-content: center;
+
+}.footer-desc{
+  margin-block: 1rem;
+}
+.social-icons{
+  font-size: 1.5rem;
+}
+.social-icons i{
+  cursor: pointer;
+  margin: 1rem .5rem;
+}
+.social-icons i:hover{
+  color: #131318;
+}
+
+
+@media screen and (max-width:768px) {
+header,main{
+  padding: .75rem;
+}
+
+  nav{
+    flex-direction: column;
+  }
+.nav-menu{
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.banner{
+  padding: 1rem;
+}
+.banner-desc{
+  font-size: 14px;
+}
+.banner-form{
+  width: 100%;
+  flex-direction: column;
+}
+.banner .banner-form input,.banner-form div{
+  flex: 1;
+  width: 100%;
+}
+.banner .btn-primary{
+  justify-content: center;
+}
+
+
+
+
+
+  .tour{
+    flex-direction: column;
+    margin-block: 3rem;
+  }
+  .tour .section-text-content{
+    text-align: left;
+  }
+  .tour img{
+    width: 100%;
+  }
+  .tour .btn-primary{
+    margin: 0 auto;
+  }
+
+
+  .layout-grid{
+/* grid-template-rows: repeat(3,1fr); */
+   margin: 0;
+   row-gap: 1rem;
+  }
+  .layout-flex{
+    flex-direction: column;
+    gap: 1rem;
+   
+    /* justify-content: space-evenly; */
+  }
+  .grid-item{
+    height: 100%;
+  }
+  .grid-item img{
+    /* width: 100%; */
+    height: 100%;
+  }
+
+  .reasons{
+    text-align: center;
+    margin-block: 2rem;
+  }
+
+
+  .deals{
+    text-align: center;
+  }
+ .deals .deals-card{
+  padding:11rem 1rem 2rem;
+  justify-content: center;
+ }
+ .deals .deals-card .card{
+  padding: 1rem;
+  text-align: left;
+  margin: 0;
+ }
+ .deals .deals-card .card div{
+  flex-wrap: wrap;
+  gap: .5rem;
+ }
+ .bandarban-tour video{
+  width: 100%;
+ }
+.news-letter{
+ 
+  flex-direction: column;
+}
+.news-letter .section-text-content{
+  padding: 1rem;
+}
+
+footer{
+  padding: 2rem 2.75rem;
+  width: 100vw;
+
+}
+footer .logo h3{
+  font-size: 22px;
+}
 }
